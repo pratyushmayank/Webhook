@@ -18,7 +18,8 @@ app.post('/webhook',function(req,res){
     console.log(req.body);
     console.log('Get error type parameter from DailogFlow'+req.body.queryResult.parameters['error_type']);
     var error=req.body.queryResult.parameters['error_type'];
-    var w= getErrors(error);
+    var w= JSON.stringify(getErrors(error));
+    w = w.replace(/[{}]/g, "");
     //var resultRetun= getErrors(error); //json schema parse from the payload which we have
     let response=" ";
     let responseObj={
