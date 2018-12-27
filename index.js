@@ -23,7 +23,7 @@ app.post('/webhook',function(req,res){
     let response=" ";
     let responseObj={
                          "fulfillmentText" : response,
-                         "fulfillmentMessages":[{"text": {"text": ["Loyalty Errors : 23"]}}],
+                         "fulfillmentMessages":[{"text": {"text": [w]}}],
                          "source":""
     }
     console.log('Here is the response to dialogflow');
